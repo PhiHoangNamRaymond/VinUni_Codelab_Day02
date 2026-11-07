@@ -7,7 +7,7 @@ operational boundaries (see 02-deep-dive-report.md).
 
 Instructions:
     1. Define your strict SYSTEM_PROMPT below, detailing the operational boundaries.
-    2. Complete the TODO inside evaluate_prompt() using Google Gemini 2.5 SDK.
+    2. Complete the TODO inside evaluate_prompt() using Google Gemini SDK.
     3. Define at least 2 adversarial test inputs designed to attack your boundaries.
     4. Run this script: python prompt_prototype.py
     5. Ensure the model output passes the safety assertions!
@@ -18,7 +18,7 @@ import sys
 from typing import Any
 
 # Standard Model Identifier
-GEMINI_MODEL = "gemini-2.5-flash"
+GEMINI_MODEL = "gemini-3.5-flash"
 
 # ===========================================================================
 # 🛡️ Operational Boundaries to Enforce via System Prompt:
@@ -129,7 +129,7 @@ if __name__ == "__main__":
 
     print("\033[94m==================================================")
     print("🚀 Vin Smart Future — Programmatic Boundary Stress-Testing")
-    print("Standard Model: Google Gemini 2.5 Flash")
+    print("Standard Model: Google Gemini 3.5 Flash")
     print("==================================================\033[0m\n")
 
     for i, test in enumerate(ADVERSARIAL_TESTS, start=1):
