@@ -3,3 +3,5 @@
 google-genai
 google-generativeai
 pytest
+groq
+python-dotenv
