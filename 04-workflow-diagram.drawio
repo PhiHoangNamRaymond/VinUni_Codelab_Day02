@@ -1,0 +1,75 @@
+<mxfile host="app.diagrams.net" agent="ZCode" version="24.7.17">
+  <diagram name="Current-State Workflow" id="vinfast-cskh-workflow">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="Current-State Workflow — Xử lý khiếu nại CSKH VinFast" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=26;fontStyle=1;fontColor=#202124;" vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="1000" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Tổng thời gian thủ công: ~25 phút/ticket  ·  Case phức tạp kẹt 12+ ngày" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontColor=#5f6368;" vertex="1" parent="1">
+          <mxGeometry x="300" y="85" width="1000" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Step boxes -->
+        <mxCell id="step1" value="&lt;b&gt;BƯỚC 1&lt;/b&gt;&lt;br&gt;&lt;b&gt;Tiếp nhận khiếu nại&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ai: CSKH L1&lt;br&gt;&lt;b&gt;Thời gian: ~3 phút&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#e8f0fe;strokeColor=#1a73e8;strokeWidth=2;fontSize=14;fontColor=#202124;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="260" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="step2" value="&lt;font color=&quot;#d93025&quot;&gt;&lt;b&gt;BOTTLENECK&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;b&gt;BƯỚC 2&lt;/b&gt;&lt;br&gt;&lt;b&gt;Tra cứu lịch sử xe&amp;nbsp;&amp;amp; log phiên sạc&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ai: CSKH L1&lt;br&gt;&lt;font color=&quot;#d93025&quot;&gt;&lt;b&gt;Thời gian: ~8 phút&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#fdecea;strokeColor=#d93025;strokeWidth=2;fontSize=14;fontColor=#202124;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="350" y="200" width="260" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="step3" value="&lt;font color=&quot;#d93025&quot;&gt;&lt;b&gt;BOTTLENECK&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;b&gt;BƯỚC 3&lt;/b&gt;&lt;br&gt;&lt;b&gt;Phân loại severity P1–P4 (tay)&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ai: CSKH L1&lt;br&gt;&lt;font color=&quot;#d93025&quot;&gt;&lt;b&gt;Thời gian: ~4 phút&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#fdecea;strokeColor=#d93025;strokeWidth=2;fontSize=14;fontColor=#202124;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="660" y="200" width="260" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="step4" value="&lt;font color=&quot;#d93025&quot;&gt;&lt;b&gt;BOTTLENECK&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;b&gt;BƯỚC 4&lt;/b&gt;&lt;br&gt;&lt;b&gt;Soạn phản hồi (tay)&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ai: CSKH L1&lt;br&gt;&lt;font color=&quot;#d93025&quot;&gt;&lt;b&gt;Thời gian: ~5 phút&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#fdecea;strokeColor=#d93025;strokeWidth=2;fontSize=14;fontColor=#202124;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="970" y="200" width="260" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="step5" value="&lt;font color=&quot;#b06000&quot;&gt;&lt;b&gt;HANDOFF&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;b&gt;BƯỚC 5&lt;/b&gt;&lt;br&gt;&lt;b&gt;Giám sát duyệt&amp;nbsp;&amp;amp; gửi khách&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ai: Supervisor&lt;br&gt;&lt;b&gt;Thời gian: ~5 phút&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#fff8e1;strokeColor=#f9ab00;strokeWidth=2;fontSize=14;fontColor=#202124;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="200" width="260" height="200" as="geometry" />
+        </mxCell>
+
+        <!-- Arrows -->
+        <mxCell id="arrow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#5f6368;strokeWidth=2;endArrow=blockThin;endFill=1;" edge="1" parent="1" source="step1" target="step2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#5f6368;strokeWidth=2;endArrow=blockThin;endFill=1;" edge="1" parent="1" source="step2" target="step3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#5f6368;strokeWidth=2;endArrow=blockThin;endFill=1;" edge="1" parent="1" source="step3" target="step4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#5f6368;strokeWidth=2;endArrow=blockThin;endFill=1;" edge="1" parent="1" source="step4" target="step5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="leg1" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#fdecea;strokeColor=#d93025;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="420" y="470" width="44" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg1t" value="Bottleneck" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontColor=#3c4043;" vertex="1" parent="1">
+          <mxGeometry x="472" y="470" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg2" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#fff8e1;strokeColor=#f9ab00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="680" y="470" width="44" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg2t" value="Handoff (L1 → Supervisor)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontColor=#3c4043;" vertex="1" parent="1">
+          <mxGeometry x="732" y="470" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg3" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#e8f0fe;strokeColor=#1a73e8;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="470" width="44" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg3t" value="Bước bình thường" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontColor=#3c4043;" vertex="1" parent="1">
+          <mxGeometry x="1092" y="470" width="180" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Business impact -->
+        <mxCell id="impact" value="Business impact: ~200 ticket/ngày  ·  ~83 giờ công CSKH/ngày  ·  Phản hồi đầu tiên ~45 phút  ·  TrustScore ~3/5" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#f1f3f4;strokeColor=#5f6368;strokeWidth=2;fontSize=14;fontColor=#3c4043;" vertex="1" parent="1">
+          <mxGeometry x="300" y="560" width="1000" height="50" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
