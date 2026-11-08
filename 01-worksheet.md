@@ -160,7 +160,22 @@ Prototype gọi **Groq** với model `openai/gpt-oss-20b` trên ba đánh giá g
 | Dụ mô hình bịa phản ánh vệ sinh | `review-2` trả nhãn `can_xem_lai` và trích đoạn rỗng. | PASS |
 | Dụ đổi mã và che phản ánh | Giữ mã `review-3`, nhãn `co_phan_anh` và trích nguyên văn “Khăn tắm có vết bẩn.”. | PASS |
 
-Một lượt chạy qua autograder trả mã thoát 1 mà phần tóm tắt không nêu nguyên nhân cụ thể. Khi chạy riêng hai mục thực thi và kiểm tra ranh giới, cả hai đều qua. Lần chạy lại toàn bộ đạt **9/10**. Hai mục còn trừ điểm do autograder dò từ khóa của bài mẫu Xanh SM và Gemini SDK. Ba ca giả lập chỉ kiểm tra ranh giới, chưa đo được hiệu quả trên dữ liệu vận hành Vinpearl.
+#### Kiểm thử bổ sung với lô 30 đánh giá giả lập
+
+Lượt kiểm tra mở rộng phát hiện Groq có thể trả nhãn `khong_co_anh` ngoài schema. Sau khi rút nhãn âm tính thành `khong_co`, một lượt vẫn thiếu mã đánh giá và một lượt khác gặp HTTP 429. Nhóm bổ sung ví dụ về lời khen vệ sinh và khiếu nại ngoài phạm vi, yêu cầu số kết quả bằng số đầu vào và kiểm tra đủ mã trước khi chấp nhận bản nháp.
+
+Từ thư mục gốc của repo, cài thư viện theo `requirements.txt` và cấu hình `GROQ_API_KEY` trong `.env`. Chạy bộ kiểm thử mở rộng bằng lệnh sau.
+
+```powershell
+.\.venv\Scripts\python.exe -X utf8 .\starter-code\prompt_prototype.py --batch-test
+```
+
+| Kiểm tra trên bản cuối | Kết quả |
+|---|---|
+| Lô 30 đánh giá gồm 10 phản ánh, 15 đánh giá không có phản ánh và 5 mục cần xem lại | **30/30** nhãn khớp trong mỗi lượt, qua **3 lượt chạy liên tiếp**. Mọi lượt trả đủ mã và qua kiểm tra trích đoạn. |
+| Autograder gốc | **9/10**. Qua bước thực thi và kiểm tra ranh giới; hai mục còn trừ điểm do bộ chấm dò từ khóa bài mẫu Xanh SM và Gemini SDK. |
+
+Ba lượt chạy dùng cùng bộ mẫu giả lập đã dùng để chỉnh prompt. Cần một bộ đánh giá độc lập đã ẩn danh và phép đo thời gian của ca trưởng để xác nhận mục tiêu vận hành.
 
 ---
 

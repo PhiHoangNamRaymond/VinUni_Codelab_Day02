@@ -8,6 +8,8 @@ Khi tôi yêu cầu trình bày Phase 3 theo ví dụ, ChatGPT xếp bốn hộp
 
 Về nội dung, tôi chưa có dữ liệu vận hành để xác nhận các mốc thời gian. Báo cáo dùng **12 phút/lô** cho toàn bộ quy trình và **10 phút/lô** cho riêng hai bước đọc và ghi nhận. Nếu dùng lẫn hai mốc, mục tiêu **7 phút/lô** sẽ dễ bị hiểu là thời gian cho cả quy trình. Vì vậy, tôi ghi rõ 7 phút chỉ là mục tiêu cho phần rà soát nếu đo được mốc đọc tay là 10 phút. Mức giảm **30%** và tỷ lệ phát hiện **90%** cũng là ngưỡng cần kiểm chứng khi thử nghiệm.
 
+Khi kiểm tra thêm một lô có đánh giá không phàn nàn về vệ sinh, Groq từng tạo nhãn `khong_co_anh` ngoài schema, khiến cả lô không dùng được. Ba ca tấn công ban đầu đều qua nhưng chưa bao phủ nhóm đánh giá này. Tôi rút gọn nhãn thành `khong_co`, làm rõ trong prompt cách xử lý lời khen vệ sinh và phản ánh ngoài phòng, rồi bổ sung kiểm tra số lượng và mã đầu vào. Tôi chạy lại lô 30 mẫu để xem lỗi có tái diễn trên cùng bộ thử hay không. Kết quả này giúp tôi kiểm tra bản sửa, còn đánh giá độ chính xác trong vận hành cần mẫu độc lập.
+
 ### Tôi đã điều chỉnh yêu cầu và ranh giới thế nào?
 
 Thay vì chỉ yêu cầu hoàn thiện báo cáo theo README, tôi gửi trực tiếp mẫu Phase 3 để làm rõ cách trình bày. Sau khi phát hiện lỗi bố cục, tôi chỉ rõ phần cần sửa là sơ đồ các bước. Lần sau, tôi sẽ ghi ngay trong yêu cầu rằng mỗi hộp phải có số bước, người thực hiện, thời gian, đầu vào và đầu ra, đồng thời yêu cầu hai hộp mỗi hàng để dễ đọc trên trang Markdown.
